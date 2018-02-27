@@ -10,9 +10,11 @@ namespace TraineeManagement_mvc_handler
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            var settings = new FriendlyUrlSettings();
-            settings.AutoRedirectMode = RedirectMode.Permanent;
-            routes.EnableFriendlyUrls(settings);
+            //var settings = new FriendlyUrlSettings();
+            //settings.AutoRedirectMode = RedirectMode.Permanent;
+            //routes.EnableFriendlyUrls(settings);
+
+            routes.MapPageRoute("speciality", "details/{speciality}", "~/SpecialityDetails.aspx");
         }
     }
 }
